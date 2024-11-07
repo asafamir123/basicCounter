@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import css from "./Counter.module.css"
 //import React from "react"
 export function Counter():JSX.Element{
 
@@ -13,10 +13,11 @@ export function Counter():JSX.Element{
         //+alert(num);
     }
     return(
-        <div>
-            <p>my name is {name} </p>
-            <button onClick={increament}>+</button>
-            {num}
+        <div className={css.container}>
+            <h1 className={css.title}>My Counter</h1>
+            <p className={css.name}>my name is {name} </p>
+            <button className={css.btn} onClick={increament}>+</button>
+            <p className={css.num}>{num}</p>
         </div>
     )
 }
